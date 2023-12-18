@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "128464869808",
+    "firebase_url": "https://berberappointment-19148-default-rtdb.firebaseio.com",
+    "project_id": "berberappointment-19148",
+    "storage_bucket": "berberappointment-19148.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128464869808:android:8daf0570a8985c962c9e75",
+        "android_client_info": {
+          "package_name": "com.example.berberappointment"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2mFWac2UcSHgA7oA8zL60L6OIAEpv_MM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
