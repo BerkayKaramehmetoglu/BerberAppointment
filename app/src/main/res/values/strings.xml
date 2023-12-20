@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">BerberAppointment</string>
+    <string name="ShopName">Berber Keşan</string>
+    //Login Page Design
+    <string name="LoginText">Login Page</string>
+    <string name="Back">Back</string>
+    <string name="PhoneNumber">Phone Number</string>
+    <string name="Password">Password</string>
+    <string name="LoginButton">Login</string>
+    <string name="Account">I Do Not Have An Account</string>
+
+    //Register Page Design
+    <string name="RegisterText">Register Page</string>
+    <string name="RegisterButton">Register</string>
+    <string name="RegisterUserN">User Name</string>
+    <string name="RegisterLastN">Last Name</string>
+    <string name="RPassword">R-Password</string>
 </resources>

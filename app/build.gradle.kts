@@ -8,6 +8,9 @@ android {
     namespace = "com.example.berberappointment"
     compileSdk = 34
 
+    buildFeatures{
+        dataBinding = true
+    }
     defaultConfig {
         applicationId = "com.example.berberappointment"
         minSdk = 24
