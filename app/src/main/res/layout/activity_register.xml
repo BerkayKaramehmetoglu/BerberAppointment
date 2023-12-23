@@ -121,9 +121,9 @@
                     android:drawableStart="@drawable/baseline_lock_24"
                     android:ems="10"
                     android:hint="@string/Password"
-                    android:inputType="numberPassword"
+                    android:inputType="textPassword"
                     android:lines="1"
-                    android:maxLength="20"
+                    android:maxLength="15"
                     android:textAlignment="center"
                     android:textSize="25sp" />
 
@@ -139,9 +139,9 @@
                     android:drawableStart="@drawable/baseline_lock_24"
                     android:ems="10"
                     android:hint="@string/RPassword"
-                    android:inputType="numberPassword"
+                    android:inputType="textPassword"
                     android:lines="1"
-                    android:maxLength="20"
+                    android:maxLength="15"
                     android:textAlignment="center"
                     android:textSize="25sp" />
 
