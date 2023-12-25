@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.berberappointment.MainActivity
 import com.example.berberappointment.R
+import com.example.berberappointment.berber.Berber
 import com.example.berberappointment.databinding.ActivityLoginBinding
 import com.example.berberappointment.register.Register
 import com.example.berberappointment.register.RegisterActivity
@@ -48,6 +49,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun loginAccess(userPhoneN: Long, userPassword: String) {
         val intentM = Intent(this@LoginActivity, MainActivity::class.java)
+        val intentAdmin = Intent(this@LoginActivity, Berber::class.java)
         val access = referenceRegister
             .orderByChild("phoneNumber")
             .equalTo(userPhoneN.toDouble())
@@ -58,17 +60,25 @@ class LoginActivity : AppCompatActivity() {
                     val register = variable.getValue(Register::class.java)
 
                     if (register != null) {
-                        if (register.phoneNumber == userPhoneN && register.password == Utils.sha256(
-                                userPassword
-                            )
-                        ) {
-                            Toast.makeText(
-                                this@LoginActivity,
-                                "Welcome ${register.userName}",
-                                Toast.LENGTH_LONG
-                            ).show()
-                            startActivity(intentM)
-                            finish()
+                        if (register.phoneNumber == userPhoneN && register.password == Utils.sha256(userPassword)) {
+                            if (register.isStaff == true){
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    "Welcome Admin ${register.userName}",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                                startActivity(intentAdmin)
+                                finish()
+                            }
+                            else if (register.isStaff == false) {
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    "Welcome ${register.userName}",
+                                    Toast.LENGTH_LONG
+                                ).show()
+                                startActivity(intentM)
+                                finish()
+                            }
                         } else {
                             Toast.makeText(
                                 this@LoginActivity,
