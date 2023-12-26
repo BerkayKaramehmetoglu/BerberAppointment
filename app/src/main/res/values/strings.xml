@@ -16,13 +16,18 @@
     <string name="RegisterLastN">Last Name</string>
     <string name="RPassword">R-Password</string>
 
-    //Creat Berber Popup
+    //Create Berber Popup
     <string name="CreatePopupRE">Barber Registration</string>
     <string name="CreatePopupN">Berber Name</string>
     <string name="CreatePopupLN">Berber Last Name</string>
     <string name="CreatePopupPN">Phone Number</string>
     <string name="CreatePopupSN">Shop Name</string>
     <string name="CreatePopupSA">Shop Address</string>
-    <string name="UploadImage">Upload Image</string>
+    <string name="CreatePopupPS">Berber Password</string>
     <string name="CreateRegistration">Create Registration</string>
+
+    //Create Berber
+    <string name="ButtonDelete">Delete</string>
+    <string name="ButtonUpdate">Update</string>
+
 </resources>

@@ -11,9 +11,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:src="@drawable/baseline_close_24"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp" />
+        android:src="@drawable/baseline_close_24" />
 
     <TextView
         android:id="@+id/createPopupRE"
@@ -22,8 +22,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="40dp"
-        android:textAlignment="center"
         android:text="@string/CreatePopupRE"
+        android:textAlignment="center"
         android:textSize="30sp" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -40,9 +40,9 @@
             android:id="@+id/createPopupN"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="20sp"
             android:inputType="text"
-            android:maxLength="15"/>
+            android:maxLength="15"
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -58,9 +58,9 @@
             android:id="@+id/createPopupLN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
             android:inputType="text"
-            android:maxLength="15"/>
+            android:maxLength="15"
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -76,10 +76,27 @@
             android:id="@+id/createPopupPN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="11"
-            android:textSize="20sp"
             android:inputType="phone"
-            android:maxLength="11"/>
+            android:maxLength="11"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/TextInputLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:hint="@string/CreatePopupPS">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/createPopupPS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="20"
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -95,9 +112,9 @@
             android:id="@+id/createPopupSN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:maxLines="20"
-            android:textSize="20sp"
-            android:inputType="text"/>
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -113,9 +130,9 @@
             android:id="@+id/createPopupSA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:inputType="text"
             android:maxLines="20"
-            android:textSize="20sp"
-            android:inputType="text" />
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

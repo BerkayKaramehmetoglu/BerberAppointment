@@ -7,7 +7,9 @@ data class CreateBerber(
     var berberName: String? = null,
     var berberLName: String? = null,
     var berberPNumber: Long? = null,
+    var berberPassword: String? = null,
     var berberShopN: String? = null,
-    var berberShopA: String? = null
+    var berberShopA: String? = null,
+    var isBerber: Boolean? = true
     ) {
 }
