@@ -87,5 +87,7 @@ class BerberShop : AppCompatActivity() {
     }
     //berber randevu alanlar
     //berbe telefonla girildiğinde istenilen sayfaya atsın
+    //her berberin seçtiği resime göre dükkan resmi getirme
+
 
 }
