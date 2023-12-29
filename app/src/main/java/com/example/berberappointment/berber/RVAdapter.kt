@@ -26,7 +26,7 @@ class RVAdapter(private val mContext: Context, private val berberList: List<Fire
             shopCImage = view.findViewById(R.id.shopCImage)
             shopCName = view.findViewById(R.id.shopCName)
             shopCOwner = view.findViewById(R.id.shopCOwner)
-            updateButton = view.findViewById(R.id.updateButton)
+            updateButton = view.findViewById(R.id.appointmentB)
             deleteButton = view.findViewById(R.id.deleteButton)
         }
     }

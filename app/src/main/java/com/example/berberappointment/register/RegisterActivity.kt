@@ -8,10 +8,10 @@ import androidx.databinding.DataBindingUtil
 import com.example.berberappointment.R
 import com.example.berberappointment.databinding.ActivityRegisterBinding
 import com.example.berberappointment.login.LoginActivity
-import com.google.firebase.database.FirebaseDatabase
 import com.example.berberappointment.utils.Utils.Companion.MIN_PASSWORD_LENGTH
 import com.example.berberappointment.utils.Utils.Companion.MIN_PHONE_LENGTH
 import com.example.berberappointment.utils.Utils.Companion.sha256
+import com.google.firebase.database.FirebaseDatabase
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var design: ActivityRegisterBinding
@@ -58,8 +58,8 @@ class RegisterActivity : AppCompatActivity() {
                             registerUserPh.toLong(),
                             hashedPassword,
                         )
+                        Toast.makeText(this, "Registration Successful ", Toast.LENGTH_SHORT).show()
                     }
-                    Toast.makeText(this, "Registration Successful ", Toast.LENGTH_LONG).show()
                 } else {
                     Toast.makeText(
                         this@RegisterActivity,
@@ -75,8 +75,6 @@ class RegisterActivity : AppCompatActivity() {
                 ).show()
             }
         }
-
-
     }
 
     private fun userRegister(
@@ -86,7 +84,7 @@ class RegisterActivity : AppCompatActivity() {
         userPassword: String,
     ) {
         val register = Register(userName, userLastN, userPhoneN, userPassword)
-
         referenceRegister.push().setValue(register)
+
     }
 }

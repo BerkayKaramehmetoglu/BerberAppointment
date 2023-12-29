@@ -2,6 +2,10 @@ package com.example.berberappointment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
+import android.widget.Button
+import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.berberappointment.berber.CreateBerber
@@ -17,11 +21,11 @@ class MainActivity : AppCompatActivity() {
     private var referenceBerber = firebase.getReference("CreateBerber")
     private lateinit var design: ActivityMainBinding
     private lateinit var berberShopList: ArrayList<CreateBerber>
+
     private lateinit var adapter: RVAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         design = DataBindingUtil.setContentView(this@MainActivity, R.layout.activity_main)
-
 
         getBerberList()
 

@@ -13,7 +13,6 @@ data class Register(
     var isBerber: Boolean? = false
 ) {
     companion object {
-        // CreateBerber'dan Register'a dönüştüren yardımcı fonksiyon
         fun fromCreateBerber(createBerber: CreateBerber): Register {
             return Register(
                 userName = createBerber.berberName,

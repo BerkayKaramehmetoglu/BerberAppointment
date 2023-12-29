@@ -14,9 +14,9 @@ import com.example.berberappointment.register.Register
 import com.example.berberappointment.register.RegisterActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.example.berberappointment.utils.Utils.Companion.sha256
+import com.google.firebase.database.FirebaseDatabase
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var design: ActivityLoginBinding
@@ -27,12 +27,9 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val intentR = Intent(this@LoginActivity, RegisterActivity::class.java)
-
         design.accountText.setOnClickListener {
             startActivity(intentR)
         }
-
-
 
         design.loginButton.setOnClickListener {
             val phoneNumber = design.loginPhoneN.text.toString()
@@ -75,8 +72,7 @@ class LoginActivity : AppCompatActivity() {
                                     ).show()
                                     startActivity(intentAdmin)
                                     finish()
-                                }
-                                else if (register.isBerber == true){
+                                } else if (register.isBerber == true) {
                                     Toast.makeText(
                                         this@LoginActivity,
                                         "Welcome Berber ${register.userName}",
@@ -84,8 +80,7 @@ class LoginActivity : AppCompatActivity() {
                                     ).show()
                                     startActivity(intentBerber)
                                     finish()
-                                }
-                                else {
+                                } else {
                                     Toast.makeText(
                                         this@LoginActivity,
                                         "Welcome ${register.userName}",
