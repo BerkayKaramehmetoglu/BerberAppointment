@@ -18,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/edittext_background"
             android:textAlignment="center"
             android:textSize="30sp"
             android:textStyle="bold" />
@@ -27,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/edittext_background"
             android:textAlignment="center"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -38,7 +40,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:src="@drawable/ic_launcher_background" />
+        android:src="@drawable/ic_launcher_background"
+        android:background="@drawable/edittext_background"/>
 
     <TableLayout
         android:layout_width="match_parent"
@@ -57,13 +60,27 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:background="@drawable/edittext_background"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:text="Yol Tarif" />
+                android:layout_marginEnd="20dp"
+                android:text="@string/ForAddress"
+                android:layout_gravity="center"
+                android:backgroundTint="@drawable/edittext_background"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewAppointment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
         </TableRow>
 
     </TableLayout>

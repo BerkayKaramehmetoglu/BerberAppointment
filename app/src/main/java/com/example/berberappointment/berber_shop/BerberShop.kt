@@ -21,8 +21,8 @@ class BerberShop : AppCompatActivity() {
     private lateinit var design: ActivityBerberShopBinding
     private val firebase = FirebaseDatabase.getInstance()
     private val referenceCreateBerber = firebase.getReference("CreateBerber")
-    private val referenceCreateAppointment = firebase.getReference("CreateAppointment")
     private lateinit var myDexter: Dexter
+    private lateinit var appointmentListLocal: MutableList<LocalTime>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,7 +80,6 @@ class BerberShop : AppCompatActivity() {
                 if (snapshot.exists()) {
                     for (variable in snapshot.children) {
                         val createBerber = variable.getValue(CreateBerber::class.java)
-
                         if (createBerber != null) {
                             design.berberShopToolbar.title = createBerber.berberShopN
                             design.berberShopToolbar.subtitle =
@@ -112,7 +111,11 @@ class BerberShop : AppCompatActivity() {
     //berbe telefonla girildiğinde istenilen sayfaya atsın
     //her berberin seçtiği resime göre dükkan resmi getirme
 
-    private fun createAppointment(startTime: String, endTime: String, cuttingTime: Int) {
+    private fun createAppointment(
+        startTime: String,
+        endTime: String,
+        cuttingTime: Int,
+    ) {
         val formatter = DateTimeFormatter.ofPattern("HH.mm")
 
         val startTimes = LocalTime.parse(startTime, formatter)
@@ -120,14 +123,17 @@ class BerberShop : AppCompatActivity() {
         val cuttingTimes = cuttingTime.toString().toLong()
 
         var currentAppointmentTime = startTimes
-        val appointmentList = mutableListOf<LocalTime>()
+        val appointmentList2 = mutableListOf<LocalTime>()
 
         while (currentAppointmentTime.isBefore(endTimes)) {
-            appointmentList.add(currentAppointmentTime)
+            appointmentList2.add(currentAppointmentTime)
             currentAppointmentTime = currentAppointmentTime.plusMinutes(cuttingTimes)
         }
 
-        referenceCreateAppointment.push().setValue(appointmentList)
+        appointmentListLocal = appointmentList2
+
+        val appointmentCreateList = CreateBerber.appointment(appointmentListLocal,5333333333)
+        referenceCreateBerber.push().setValue(appointmentCreateList)
 
         Toast.makeText(this@BerberShop, "Appointment Created", Toast.LENGTH_SHORT).show()
     }

@@ -50,18 +50,20 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Ad"
+                        android:layout_gravity="center"
                         android:textAlignment="center"
-                        android:textSize="25sp" />
+                        android:textSize="25sp"
+                        android:background="@drawable/edittext_background"/>
 
                     <TextView
                         android:id="@+id/berberLastName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Soyad"
+                        android:layout_gravity="center"
                         android:textAlignment="center"
-                        android:textSize="25sp" />
+                        android:textSize="25sp"
+                        android:background="@drawable/edittext_background"/>
                 </LinearLayout>
 
                 <TextView
@@ -70,7 +72,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:text="Adres"
+                    android:background="@drawable/edittext_background"
                     android:textAlignment="center"
                     android:textSize="25sp" />
 
@@ -80,7 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:text="Appointment Scheduling"
+                    android:text="@string/AppointmentScheduling"
                     android:textAlignment="center"
                     android:textSize="20sp"
                     android:textStyle="italic" />
@@ -101,8 +103,9 @@
                             android:id="@+id/startTime"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Start Time(08.00)"
-                            android:inputType="number|numberDecimal" />
+                            android:hint="@string/StartTime"
+                            android:inputType="number|numberDecimal"
+                            android:background="@drawable/edittext_background"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -114,8 +117,9 @@
                             android:id="@+id/endTime"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="End Time(23.00)"
-                            android:inputType="number|numberDecimal" />
+                            android:hint="@string/EndTime"
+                            android:inputType="number|numberDecimal"
+                            android:background="@drawable/edittext_background"/>
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,8 +133,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:hint="Cutting Time(Mn)"
-                            android:inputType="number" />
+                            android:hint="@string/CuttingTime"
+                            android:inputType="number"
+                            android:background="@drawable/edittext_background"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
@@ -142,7 +147,8 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:text="Create an Appointment" />
+                    android:text="@string/CreateAppointment"
+                    android:backgroundTint="@drawable/edittext_background"/>
 
                 <TextView
                     android:id="@+id/textView3"
@@ -150,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:text="Those who made an appointment"
+                    android:text="@string/ThoseAppointment"
                     android:textAlignment="center"
                     android:textSize="20sp"
                     android:textStyle="italic" />

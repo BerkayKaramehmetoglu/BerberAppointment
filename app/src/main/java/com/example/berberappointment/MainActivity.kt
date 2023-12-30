@@ -2,10 +2,6 @@ package com.example.berberappointment
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import android.widget.Button
-import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.berberappointment.berber.CreateBerber

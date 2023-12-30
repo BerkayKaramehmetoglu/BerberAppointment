@@ -113,7 +113,7 @@ class Berber : AppCompatActivity() {
                 } else {
                     Toast.makeText(this@Berber, "Berber Created", Toast.LENGTH_SHORT).show()
                     val hashedPassword = sha256(berberPassword.toString()) //SHA-256
-                    var berber = createBerber(
+                    val berber = createBerber(
                         berberName.toString(),
                         berberLName.toString(),
                         berberPhoneN.toString().toLong(),
@@ -121,7 +121,7 @@ class Berber : AppCompatActivity() {
                         berberShopN.toString(),
                         berberShopA.toString()
                     )
-                    var register = Register.fromCreateBerber(berber)
+                    val register = Register.fromCreateBerber(berber)
                     referenceRegister.push().setValue(register)
                     build.dismiss()
 

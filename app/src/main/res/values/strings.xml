@@ -30,4 +30,18 @@
     <string name="ButtonDelete">Delete</string>
     <string name="ButtonUpdate">Update</string>
 
+    //appointment pages
+    <string name="ForAddress">For Address</string>
+
+    //berber shop
+    <string name="StartTime">Start Time(08.00)</string>
+    <string name="EndTime">End Time(23.00)</string>
+    <string name="CuttingTime">Cutting Time(Mn)</string>
+    <string name="CreateAppointment">Create an Appointment</string>
+    <string name="ThoseAppointment">Those who made an appointment</string>
+    <string name="AppointmentScheduling">Appointment Scheduling</string>
+
+    //berber list card
+    <string name="Appointment">Appointment</string>
+
 </resources>

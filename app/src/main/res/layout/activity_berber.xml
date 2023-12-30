@@ -15,7 +15,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:clickable="true"
-            android:contentDescription="Popup Aç"
             android:src="@android:drawable/ic_input_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

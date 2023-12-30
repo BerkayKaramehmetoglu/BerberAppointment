@@ -20,8 +20,6 @@ data class Register(
                 phoneNumber = createBerber.berberPNumber,
                 password = createBerber.berberPassword,
                 isBerber = createBerber.isBerber,
-                isStaff = false,
-
             )
         }
     }

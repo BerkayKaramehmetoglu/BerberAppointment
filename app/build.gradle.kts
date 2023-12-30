@@ -64,4 +64,7 @@ dependencies {
     implementation("com.google.firebase:firebase-storage")
 
     implementation ("com.squareup.picasso:picasso:2.71828")
+
+    //google maps
+    implementation("com.google.android.gms:play-services-location:21.0.1")
 }
