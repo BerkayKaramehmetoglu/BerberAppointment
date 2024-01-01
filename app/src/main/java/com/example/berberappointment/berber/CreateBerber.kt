@@ -1,7 +1,7 @@
 package com.example.berberappointment.berber
 
+import com.example.berberappointment.berber_shop.AppointmentBerber
 import com.google.firebase.database.IgnoreExtraProperties
-import java.time.LocalTime
 
 @IgnoreExtraProperties
 data class CreateBerber(
@@ -12,14 +12,6 @@ data class CreateBerber(
     var berberShopN: String? = null,
     var berberShopA: String? = null,
     var isBerber: Boolean? = true,
-    var appointmentList: MutableList<LocalTime>? = null
+    var appointments: List<String>? = null
 ) {
-    companion object {
-        fun appointment(appointmentList: MutableList<LocalTime>?,berberPhoneNumber: Long): CreateBerber {
-            return CreateBerber(
-                appointmentList = appointmentList,
-                berberPNumber = berberPhoneNumber
-            )
-        }
-    }
 }

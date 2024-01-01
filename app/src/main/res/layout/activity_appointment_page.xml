@@ -68,8 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="20dp"
                 android:text="@string/ForAddress"
-                android:layout_gravity="center"
-                android:backgroundTint="@drawable/edittext_background"/>
+                android:layout_gravity="center"/>
         </TableRow>
 
         <TableRow

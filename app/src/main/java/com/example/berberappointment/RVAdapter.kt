@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import com.example.berberappointment.berber.CreateBerber
-import de.hdodenhof.circleimageview.CircleImageView
 
 
 class RVAdapter(private val mContext: Context, private val berberList: List<CreateBerber>) :
@@ -17,14 +16,12 @@ class RVAdapter(private val mContext: Context, private val berberList: List<Crea
     private lateinit var build: AlertDialog
 
     inner class BerberShopList(view: View) : RecyclerView.ViewHolder(view) {
-        var shopImage: CircleImageView
         var shopName: TextView
         var button: Button
 
         init {
-            shopImage = view.findViewById(R.id.shopImage)
             shopName = view.findViewById(R.id.shopName)
-            button = view.findViewById(R.id.appointmentB)
+            button = view.findViewById(R.id.updateButton)
 
         }
 

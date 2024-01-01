@@ -29,16 +29,6 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/shopImageBerber"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/baseline_add_24"
-                    app:civ_border_width="5dp" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -49,21 +39,22 @@
                         android:id="@+id/berberName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_background"
                         android:textAlignment="center"
-                        android:textSize="25sp"
-                        android:background="@drawable/edittext_background"/>
+                        android:textSize="25sp" />
 
                     <TextView
                         android:id="@+id/berberLastName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
                         android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_background"
+                        android:text=""
                         android:textAlignment="center"
-                        android:textSize="25sp"
-                        android:background="@drawable/edittext_background"/>
+                        android:textSize="25sp" />
                 </LinearLayout>
 
                 <TextView
@@ -73,6 +64,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:background="@drawable/edittext_background"
+                    android:text=""
                     android:textAlignment="center"
                     android:textSize="25sp" />
 
@@ -104,8 +96,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/StartTime"
-                            android:inputType="number|numberDecimal"
-                            android:background="@drawable/edittext_background"/>
+                            android:inputType="number|numberDecimal" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -118,8 +109,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/EndTime"
-                            android:inputType="number|numberDecimal"
-                            android:background="@drawable/edittext_background"/>
+                            android:inputType="number|numberDecimal" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -134,8 +124,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:hint="@string/CuttingTime"
-                            android:inputType="number"
-                            android:background="@drawable/edittext_background"/>
+                            android:inputType="number" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
@@ -147,8 +136,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
-                    android:text="@string/CreateAppointment"
-                    android:backgroundTint="@drawable/edittext_background"/>
+                    android:text="@string/CreateAppointment" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -164,8 +152,8 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:layout_marginTop="10dp"/>
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1" />
 
             </LinearLayout>
 

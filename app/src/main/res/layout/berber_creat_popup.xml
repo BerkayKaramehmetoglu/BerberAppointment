@@ -22,7 +22,6 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="40dp"
-        android:background="@drawable/edittext_background"
         android:text="@string/CreatePopupRE"
         android:textAlignment="center"
         android:textSize="30sp" />
@@ -150,7 +149,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:text="@string/CreateRegistration"
-        android:textSize="20sp"
-        android:backgroundTint="@drawable/edittext_background"/>
+        android:textSize="20sp"/>
 
 </LinearLayout>

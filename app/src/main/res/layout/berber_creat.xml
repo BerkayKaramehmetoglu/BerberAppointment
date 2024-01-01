@@ -9,22 +9,14 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/listCCard"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:orientation="horizontal">
-
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/shopCImage"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:src="@drawable/ic_launcher_background"
-                app:civ_border_width="3dp" />
 
             <TextView
                 android:id="@+id/shopCName"
@@ -48,25 +40,21 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/appointmentB"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center|top"
-                    android:backgroundTint="@drawable/edittext_background"
+                    android:id="@+id/updateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
                     android:text="@string/ButtonUpdate" />
 
                 <Button
                     android:id="@+id/deleteButton"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center|top"
-                    android:backgroundTint="@drawable/edittext_background"
                     android:text="@string/ButtonDelete" />
 
             </LinearLayout>

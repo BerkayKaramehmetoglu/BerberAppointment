@@ -8,7 +8,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.berberappointment.R
-import de.hdodenhof.circleimageview.CircleImageView
 import com.example.berberappointment.berber.CreateBerber as FirebaseCreateBerber
 
 class RVAdapter(private val mContext: Context, private val berberList: List<FirebaseCreateBerber>) :
@@ -16,17 +15,15 @@ class RVAdapter(private val mContext: Context, private val berberList: List<Fire
 
     inner class CreateBerber(view: View) : RecyclerView.ViewHolder(view) {
 
-        var shopCImage: CircleImageView
         var shopCName: TextView
         var shopCOwner: TextView
         var updateButton: Button
         var deleteButton: Button
 
         init {
-            shopCImage = view.findViewById(R.id.shopCImage)
             shopCName = view.findViewById(R.id.shopCName)
             shopCOwner = view.findViewById(R.id.shopCOwner)
-            updateButton = view.findViewById(R.id.appointmentB)
+            updateButton = view.findViewById(R.id.updateButton)
             deleteButton = view.findViewById(R.id.deleteButton)
         }
     }

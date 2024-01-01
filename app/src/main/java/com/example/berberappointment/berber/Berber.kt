@@ -56,7 +56,6 @@ class Berber : AppCompatActivity() {
                 berberShopN,
                 berberShopA
             )
-
         referenceBerber.push().setValue(createBerber)
         return createBerber
     }
