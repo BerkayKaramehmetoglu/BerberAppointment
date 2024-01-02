@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
     private var referenceBerber = firebase.getReference("CreateBerber")
     private lateinit var design: ActivityMainBinding
     private lateinit var berberShopList: ArrayList<CreateBerber>
-
     private lateinit var adapter: RVAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     private fun getBerberList() {
         design.recyclerView1.setHasFixedSize(true)
         design.recyclerView1.layoutManager = LinearLayoutManager(this@MainActivity)
+
 
         referenceBerber.addValueEventListener(object : ValueEventListener {
 
