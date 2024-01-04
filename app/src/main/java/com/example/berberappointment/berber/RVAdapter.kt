@@ -17,14 +17,10 @@ class RVAdapter(private val mContext: Context, private val berberList: List<Fire
 
         var shopCName: TextView
         var shopCOwner: TextView
-        var updateButton: Button
-        var deleteButton: Button
 
         init {
             shopCName = view.findViewById(R.id.shopCName)
             shopCOwner = view.findViewById(R.id.shopCOwner)
-            updateButton = view.findViewById(R.id.updateButton)
-            deleteButton = view.findViewById(R.id.deleteButton)
         }
     }
 

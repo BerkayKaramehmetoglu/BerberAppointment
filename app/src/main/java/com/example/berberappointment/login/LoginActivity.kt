@@ -22,6 +22,9 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var design: ActivityLoginBinding
     private val firebase = FirebaseDatabase.getInstance()
     private val referenceRegister = firebase.getReference("Register")
+    companion object{
+        var phoneNumber: Double = 0.0
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         design = DataBindingUtil.setContentView(this@LoginActivity, R.layout.activity_login)
         super.onCreate(savedInstanceState)
@@ -55,15 +58,15 @@ class LoginActivity : AppCompatActivity() {
             .orderByChild("phoneNumber")
             .equalTo(userPhoneN.toDouble())
 
-        access.addValueEventListener(object : ValueEventListener {
+        access.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
                     for (variable in snapshot.children) {
                         val register = variable.getValue(Register::class.java)
-
                         if (register != null) {
                             val hashedPassword = sha256(userPassword)
                             if (register.password == hashedPassword) {
+                                phoneNumber = register.phoneNumber!!.toDouble()
                                 if (register.isStaff == true) {
                                     Toast.makeText(
                                         this@LoginActivity,

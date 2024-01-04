@@ -7,7 +7,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@drawable/back_ground"
         android:orientation="vertical"
         android:textAlignment="center"
         tools:context=".login.LoginActivity">
@@ -21,7 +21,8 @@
             android:text="@string/ShopName"
             android:textAlignment="center"
             android:textSize="35sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/textView6"
@@ -31,7 +32,8 @@
             android:text="@string/LoginText"
             android:textAlignment="center"
             android:textSize="20sp"
-            android:textStyle="bold|italic" />
+            android:textStyle="bold|italic"
+            android:textColor="@color/black"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

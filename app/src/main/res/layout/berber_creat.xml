@@ -24,9 +24,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="@drawable/edittext_background"
                 android:textAlignment="center"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/shopCOwner"
@@ -34,30 +34,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="@drawable/edittext_background"
                 android:textAlignment="center"
-                android:textSize="20sp" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <Button
-                    android:id="@+id/updateButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="@string/ButtonUpdate" />
-
-                <Button
-                    android:id="@+id/deleteButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/ButtonDelete" />
-
-            </LinearLayout>
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 

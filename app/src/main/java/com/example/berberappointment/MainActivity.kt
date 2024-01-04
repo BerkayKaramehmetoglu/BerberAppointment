@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         design.recyclerView1.layoutManager = LinearLayoutManager(this@MainActivity)
 
 
-        referenceBerber.addValueEventListener(object : ValueEventListener {
+        referenceBerber.addListenerForSingleValueEvent(object : ValueEventListener {
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 val tempBerberShopList = ArrayList<CreateBerber>()

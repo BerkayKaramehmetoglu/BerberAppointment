@@ -59,6 +59,7 @@ class RegisterActivity : AppCompatActivity() {
                             hashedPassword,
                         )
                         Toast.makeText(this, "Registration Successful ", Toast.LENGTH_SHORT).show()
+                        startActivity(intent)
                     }
                 } else {
                     Toast.makeText(

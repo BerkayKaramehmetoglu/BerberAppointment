@@ -23,9 +23,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:background="@drawable/edittext_background"
                 android:textAlignment="center"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:textColor="@color/black"/>
 
             <Button
                 android:id="@+id/updateButton"

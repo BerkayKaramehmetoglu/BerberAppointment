@@ -5,9 +5,12 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.berberappointment.R
 import com.example.berberappointment.berber.CreateBerber
 import com.example.berberappointment.databinding.ActivityBerberShopBinding
+import com.example.berberappointment.login.LoginActivity
+import com.example.berberappointment.register.Register
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -21,7 +24,10 @@ class BerberShop : AppCompatActivity() {
     private lateinit var design: ActivityBerberShopBinding
     private val firebase = FirebaseDatabase.getInstance()
     private val referenceCreateBerber = firebase.getReference("CreateBerber")
+    private val referenceRegister = firebase.getReference("Register")
     private lateinit var appointmentListLocal: MutableList<String>
+    private lateinit var usersAppoList: ArrayList<Register>
+    private lateinit var adapter: RVAdapterSetAppo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +35,7 @@ class BerberShop : AppCompatActivity() {
 
         setClickListeners()
         loadDataFromFirebase()
+        getUserAppointment()
     }
 
     private fun setClickListeners() {
@@ -80,7 +87,7 @@ class BerberShop : AppCompatActivity() {
     }
 
     private fun updateCreateBerberAppointment(appointmentList: AppointmentBerber) {
-        val berberPNumber = 5333333333.toDouble()
+        val berberPNumber = LoginActivity.phoneNumber
 
         val query = referenceCreateBerber.orderByChild("berberPNumber").equalTo(berberPNumber)
         query.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -98,8 +105,9 @@ class BerberShop : AppCompatActivity() {
             }
         })
     }
+
     private fun loadDataFromFirebase() {
-        val berberPNumber = 5333333333.toDouble()
+        val berberPNumber = LoginActivity.phoneNumber
 
         val query = referenceCreateBerber.orderByChild("berberPNumber").equalTo(berberPNumber)
         query.addListenerForSingleValueEvent(object : ValueEventListener {
@@ -119,11 +127,35 @@ class BerberShop : AppCompatActivity() {
     }
 
     private fun updateUI(createBerber: CreateBerber) {
-        // UI elemanlarını güncelle
         design.berberShopToolbar.title = createBerber.berberShopN.toString()
         design.berberShopToolbar.subtitle = createBerber.berberPNumber.toString()
         design.berberName.text = createBerber.berberName.toString()
         design.berberLastName.text = createBerber.berberLName.toString()
         design.berberShopAddress.text = createBerber.berberShopA.toString()
+    }
+
+    private fun getUserAppointment() {
+        design.recyclerViewAppo.setHasFixedSize(true)
+        design.recyclerViewAppo.layoutManager = LinearLayoutManager(this@BerberShop)
+
+        referenceRegister.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val userAppoList = ArrayList<Register>()
+                for (child in snapshot.children) {
+                    val berber = child.getValue(Register::class.java)
+                    if (berber?.appointmentDatetime != null && berber.appointmentBerber?.toDouble() == LoginActivity.phoneNumber) {
+                        userAppoList.add(berber)
+                    }
+                }
+                usersAppoList = userAppoList
+                adapter = RVAdapterSetAppo(this@BerberShop, userAppoList)
+                design.recyclerViewAppo.adapter = adapter
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+        })
     }
 }
