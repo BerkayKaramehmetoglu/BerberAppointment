@@ -25,8 +25,8 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/shopCOwner"
@@ -35,8 +35,8 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:textAlignment="center"
-                android:textSize="20sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="20sp" />
 
         </LinearLayout>
 

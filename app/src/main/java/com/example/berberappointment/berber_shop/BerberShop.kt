@@ -1,5 +1,6 @@
 package com.example.berberappointment.berber_shop
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -36,6 +37,7 @@ class BerberShop : AppCompatActivity() {
         setClickListeners()
         loadDataFromFirebase()
         getUserAppointment()
+        logout()
     }
 
     private fun setClickListeners() {
@@ -157,5 +159,13 @@ class BerberShop : AppCompatActivity() {
             }
 
         })
+    }
+
+    private fun logout(){
+        design.berberShopToolbar.setNavigationOnClickListener {
+            val intent = Intent(this@BerberShop,LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

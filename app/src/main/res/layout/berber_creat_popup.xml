@@ -150,6 +150,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:text="@string/CreateRegistration"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:backgroundTint="@color/black"/>
 
 </LinearLayout>

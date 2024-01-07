@@ -1,11 +1,13 @@
 package com.example.berberappointment
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.berberappointment.berber.CreateBerber
 import com.example.berberappointment.databinding.ActivityMainBinding
+import com.example.berberappointment.login.LoginActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         design = DataBindingUtil.setContentView(this@MainActivity, R.layout.activity_main)
 
         getBerberList()
+        logout()
 
     }
 
@@ -50,5 +53,13 @@ class MainActivity : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
         })
+    }
+
+    private fun logout() {
+        design.toolbar.setNavigationOnClickListener {
+            val intent = Intent(this@MainActivity, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

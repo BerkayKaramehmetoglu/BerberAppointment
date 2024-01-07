@@ -14,11 +14,12 @@
             android:id="@+id/berberShopToolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:background="@color/white"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
             app:subtitle="5231123123"
-            app:title="Berber Saloon" />
+            app:title="Berber Saloon"
+            app:navigationIcon="@drawable/baseline_power_settings_new_24"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -42,8 +43,8 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:textAlignment="center"
-                        android:textSize="25sp"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
 
                     <TextView
                         android:id="@+id/berberLastName"
@@ -52,8 +53,8 @@
                         android:layout_gravity="center"
                         android:layout_weight="1"
                         android:textAlignment="center"
-                        android:textSize="25sp"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
                 </LinearLayout>
 
                 <TextView
@@ -63,8 +64,8 @@
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:textAlignment="center"
-                    android:textSize="25sp"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -74,9 +75,9 @@
                     android:layout_weight="1"
                     android:text="@string/AppointmentScheduling"
                     android:textAlignment="center"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="italic"
-                    android:textColor="@color/black"/>
+                    android:textStyle="italic" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -97,7 +98,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/StartTime"
                             android:inputType="number|numberDecimal"
-                            android:textColor="@color/black"/>
+                            android:textColor="@color/black" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -112,7 +113,7 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/EndTime"
                             android:inputType="number|numberDecimal"
-                            android:textColor="@color/black"/>
+                            android:textColor="@color/black" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -140,6 +141,7 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
+                    android:backgroundTint="@color/black"
                     android:text="@string/CreateAppointment" />
 
                 <TextView
@@ -150,9 +152,9 @@
                     android:layout_weight="1"
                     android:text="@string/ThoseAppointment"
                     android:textAlignment="center"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
-                    android:textStyle="italic"
-                    android:textColor="@color/black"/>
+                    android:textStyle="italic" />
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewAppo"

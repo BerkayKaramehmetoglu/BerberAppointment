@@ -13,17 +13,19 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
+            android:layout_gravity="end"
+            android:background="@color/white"
+            android:gravity="center"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/baseline_power_settings_new_24"
             app:subtitle="Berber List"
             app:title="@string/ShopName" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/back_ground"/>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

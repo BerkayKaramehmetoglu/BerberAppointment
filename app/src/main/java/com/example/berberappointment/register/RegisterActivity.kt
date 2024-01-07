@@ -24,6 +24,7 @@ class RegisterActivity : AppCompatActivity() {
         val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
         design.registerBackB.setOnClickListener {
             startActivity(intent)
+            finish()
         }
 
         design.registerButton.setOnClickListener {

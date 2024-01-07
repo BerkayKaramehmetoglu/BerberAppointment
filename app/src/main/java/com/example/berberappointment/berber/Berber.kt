@@ -1,5 +1,6 @@
 package com.example.berberappointment.berber
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.berberappointment.R
 import com.example.berberappointment.databinding.ActivityBerberBinding
+import com.example.berberappointment.login.LoginActivity
 import com.example.berberappointment.register.Register
 import com.google.firebase.database.FirebaseDatabase
 import com.example.berberappointment.utils.Utils.Companion.sha256
@@ -35,8 +37,8 @@ class Berber : AppCompatActivity() {
 
         getBerberList()
         createBerberPopup()
+        logout()
 
-        //Delete ve Update Buttonlarını Çalışır Hale getir
     }
 
     private fun createBerber(
@@ -159,5 +161,13 @@ class Berber : AppCompatActivity() {
                 TODO("Not yet implemented")
             }
         })
+    }
+
+    private fun logout(){
+        design.toolbar2.setNavigationOnClickListener {
+            val intent = Intent(this@Berber,LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }

@@ -32,6 +32,7 @@ class LoginActivity : AppCompatActivity() {
         val intentR = Intent(this@LoginActivity, RegisterActivity::class.java)
         design.accountText.setOnClickListener {
             startActivity(intentR)
+            finish()
         }
 
         design.loginButton.setOnClickListener {

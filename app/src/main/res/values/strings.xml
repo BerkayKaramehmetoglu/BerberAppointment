@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BerberAppointment</string>
+    <string name="app_name">Berber Appointment</string>
     <string name="ShopName">Berber Keşan</string>
     //Login Page Design
     <string name="LoginText">Login Page</string>

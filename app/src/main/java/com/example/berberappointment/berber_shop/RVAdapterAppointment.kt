@@ -82,7 +82,7 @@ class RVAdapterAppointment(
 
     fun markButtonDisable(appointmentBtn: Button) {
         appointmentBtn.isEnabled = false
-        appointmentBtn.setTextColor(ContextCompat.getColor(mContext, R.color.white))
+        appointmentBtn.setTextColor(ContextCompat.getColor(mContext, R.color.red))
         appointmentBtn.setBackgroundColor(
             ContextCompat.getColor(
                 mContext,
